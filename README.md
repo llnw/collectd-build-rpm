@@ -13,7 +13,7 @@ Building the package:
 * Build the SRPM:
   `mock -r epel-5-x86_64 --buildsrpm --spec ~/rpmbuild/SPECS/collectd.spec --sources ~/rpmbuild/SOURCES/`
 * Build the RPM:
-  `mock -r epel-5-x86_64 --no-clean --rebuild /var/lib/mock/centos-6-x86_64/result/collectd-X.Y.Z-NN.src.rpm`
+  `mock -r epel-5-x86_64 --no-clean --rebuild /var/lib/mock/epel-5-x86_64/result/collectd-X.Y.Z-NN.src.rpm`
 * Repeat as needed for other environments
 
 yajl for RHEL/CentOS 5.x:
@@ -34,7 +34,7 @@ curl-json plugin.
     cd /usr/src/redhat/RPMS/x86_64/
     rpm -Uvh yajl-1.0.7-3.el5.x86_64.rpm yajl-devel-1.0.7-3.el5.x86_64.rpm
 
-You will also need to install the [mock package dependency not in a repository].
+You will also need to provide the yajl deps in a repo to mock in /etc/mock/default.cfg.
 
 
   [current version]: https://github.com/llnw/collectd/releases/download/collectd-5.4.1-llnw6/collectd-5.4.1.llnw6.tar.gz
