@@ -3,8 +3,8 @@ LLNW collectd packaging for RPM
 
 * Upstream:  https://github.com/llnw/collectd/tree/master/contrib/redhat
 
-Building the package:
----------------------
+Building the package with mock:
+-------------------------------
 
 * Enable [EPEL]
 * `yum install mock`
@@ -15,6 +15,9 @@ Building the package:
 * Build the RPM:
   `mock -r epel-5-x86_64 --no-clean --rebuild /var/lib/mock/epel-5-x86_64/result/collectd-X.Y.Z-NN.src.rpm`
 * Repeat as needed for other environments
+
+Building the package native:
+----------------------------
 
 yajl for RHEL/CentOS 5.x:
 ------------------------

@@ -494,7 +494,11 @@ Summary:	Perl plugin for collectd
 Group:		System Environment/Daemons
 Requires:	%{name}%{?_isa} = %{version}-%{release}
 Requires:	perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
-BuildRequires:	%{?el6:perl-ExtUtils-Embed}
+%if 0%{?rhel} >= 6
+BuildRequires: perl-ExtUtils-Embed
+%else
+BuildRequires: perl
+%endif
 %description perl
 The Perl plugin embeds a Perl interpreter into collectd and exposes the
 application programming interface (API) to Perl-scripts.
